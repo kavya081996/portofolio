@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Name | CSE Student Portfolio</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#151922;
+}
+
+a{
+    text-decoration:none;
+}
+
+section{
+    padding:90px 7%;
+    scroll-margin-top:75px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.label{
+    color:#4169e1;
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.title{
+    font-size:45px;
+    margin-top:8px;
+}
+
+.title span{
+    color:#4169e1;
+}
+
+.subtitle{
+    color:#777;
+    margin-top:10px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.navbar{
+    height:72px;
+    max-width:1200px;
+    margin:auto;
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#111827;
+}
+
+.logo span{
+    color:#4169e1;
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    color:#666;
+    font-size:13px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#4169e1;
+}
+
+.nav-resume{
+    background:#111827;
+    color:white;
+    padding:10px 16px;
+    border-radius:5px;
+    font-size:12px;
+}
+
+.nav-resume:hover{
+    background:#4169e1;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+#home{
+    min-height:650px;
+
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+
+    align-items:center;
+
+    gap:70px;
+}
+
+.home-label{
+    color:#4169e1;
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.home h1{
+    font-size:68px;
+    line-height:1.05;
+    margin-top:18px;
+}
+
+.home h1 span{
+    color:#4169e1;
+}
+
+.home-description{
+    color:#707784;
+    max-width:620px;
+    line-height:1.8;
+    margin-top:25px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    margin-top:30px;
+}
+
+.btn{
+    padding:13px 20px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.primary{
+    background:#111827;
+    color:white;
+}
+
+.primary:hover{
+    background:#4169e1;
+}
+
+.secondary{
+    background:white;
+    color:#111827;
+    border:1px solid #ddd;
+}
+
+.secondary:hover{
+    color:#4169e1;
+    border-color:#4169e1;
+}
+
+
+/* PROFILE */
+
+.profile-card{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.1);
+}
+
+.profile-image{
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    border:7px solid #eef1ff;
+}
+
+.profile-card h2{
+    margin-top:18px;
+}
+
+.profile-card p{
+    color:#777;
+    font-size:13px;
+}
+
+.profile-line{
+    height:1px;
+    background:#eee;
+    margin:25px 0;
+}
+
+.profile-stats{
+    display:flex;
+    justify-content:space-around;
+}
+
+.profile-stats strong{
+    display:block;
+    font-size:20px;
+}
+
+.profile-stats small{
+    color:#888;
+    font-size:10px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+
+    margin-top:50px;
+}
+
+.about-text p{
+    color:#707784;
+    line-height:1.9;
+    font-size:14px;
+    margin-bottom:17px;
+}
+
+.details{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.detail{
+    padding:18px;
+    background:#f7f8fc;
+    border:1px solid #e5e7eb;
+    border-radius:7px;
+}
+
+.detail small{
+    color:#4169e1;
+    font-size:9px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.detail strong{
+    display:block;
+    margin-top:5px;
+    font-size:13px;
+}
+
+.hobbies{
+    margin-top:30px;
+}
+
+.hobbies h3{
+    margin-bottom:15px;
+}
+
+.hobby-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.hobby{
+    background:#edf1ff;
+    color:#4169e1;
+    padding:7px 13px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+#education{
+    background:#f5f7fb;
+}
+
+.education-list{
+    margin-top:45px;
+}
+
+.education{
+    display:grid;
+    grid-template-columns:150px 1fr;
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+}
+
+.education:hover{
+    transform:translateY(-4px);
+    border-color:#4169e1;
+}
+
+.education-year{
+    color:#4169e1;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.education h3{
+    font-size:21px;
+}
+
+.education h4{
+    color:#555;
+    margin-top:4px;
+}
+
+.education p{
+    color:#777;
+    font-size:13px;
+    margin-top:7px;
+}
+
+.grade{
+    display:inline-block;
+    margin-top:12px;
+
+    padding:6px 11px;
+
+    background:#edf1ff;
+    color:#4169e1;
+
+    border-radius:4px;
+
+    font-size:10px;
+    font-weight:bold;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+#skills{
+    background:white;
+}
+
+.skills{
+    margin-top:45px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.skill{
+    background:#f7f8fc;
+
+    border:1px solid #e5e7eb;
+
+    padding:24px;
+
+    text-align:center;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.skill:hover{
+    background:#4169e1;
+    color:white;
+    transform:translateY(-5px);
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+#projects{
+    background:#111827;
+    color:white;
+}
+
+#projects .subtitle{
+    color:#9ca3af;
+}
+
+.projects{
+    margin-top:45px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.project{
+    background:#1b2330;
+
+    border:1px solid #30394a;
+
+    padding:28px;
+
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+.project:hover{
+    border-color:#4169e1;
+    transform:translateY(-4px);
+}
+
+.project small{
+    color:#7187ff;
+    font-weight:bold;
+}
+
+.project h3{
+    font-size:21px;
+    margin-top:10px;
+}
+
+.project p{
+    color:#9ca3af;
+    font-size:13px;
+    line-height:1.8;
+    margin-top:10px;
+}
+
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:17px;
+}
+
+.tech span{
+    background:#273142;
+    color:#c5ccd8;
+    padding:5px 9px;
+    border-radius:4px;
+    font-size:9px;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+#certifications{
+    background:#f5f7fb;
+}
+
+.certificates{
+    margin-top:45px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.certificate{
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.certificate:hover{
+    transform:translateY(-5px);
+    border-color:#4169e1;
+}
+
+.certificate img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+.certificate-info{
+    padding:20px;
+}
+
+.certificate-info small{
+    color:#4169e1;
+    font-size:9px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.certificate-info h3{
+    margin-top:7px;
+}
+
+.certificate-info p{
+    color:#777;
+    font-size:12px;
+    margin-top:6px;
+}
+
+.view{
+    display:inline-block;
+
+    margin-top:13px;
+
+    background:#111827;
+    color:white;
+
+    padding:8px 13px;
+
+    border-radius:4px;
+
+    font-size:10px;
+}
+
+.view:hover{
+    background:#4169e1;
+}
+
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+#achievements{
+    background:white;
+}
+
+.achievements{
+    max-width:850px;
+    margin:45px auto 0;
+
+    border-left:2px solid #e2e5eb;
+
+    padding-left:30px;
+}
+
+.achievement{
+    position:relative;
+    margin-bottom:40px;
+}
+
+.achievement-dot{
+    position:absolute;
+
+    width:11px;
+    height:11px;
+
+    background:#4169e1;
+
+    border-radius:50%;
+
+    left:-37px;
+    top:5px;
+}
+
+.achievement span{
+    color:#4169e1;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.achievement h3{
+    margin-top:5px;
+}
+
+.achievement p{
+    color:#777;
+    font-size:13px;
+}
+
+
+/* =========================
+   RESUME
+========================= */
+
+#resume{
+    background:#edf1ff;
+    text-align:center;
+}
+
+#resume h2{
+    font-size:40px;
+}
+
+#resume p{
+    color:#777;
+    margin-top:8px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact{
+    background:white;
+}
+
+.contact{
+    margin-top:45px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+}
+
+.contact-details p{
+    margin-bottom:15px;
+    color:#777;
+}
+
+.contact-details strong{
+    color:#111827;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+
+    border:1px solid #dfe3e9;
+
+    border-radius:5px;
+
+    padding:13px;
+
+    font-family:inherit;
+
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#4169e1;
+}
+
+.contact-form textarea{
+    height:130px;
+    resize:none;
+}
+
+.contact-form button{
+    border:0;
+
+    background:#111827;
+    color:white;
+
+    padding:13px;
+
+    border-radius:5px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:#4169e1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#090d15;
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+footer span{
+    color:#4169e1;
+}
+
+footer p{
+    color:#777;
+    font-size:11px;
+    margin-top:5px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    #home{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .home-description{
+        margin:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .certificates{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 5%;
+    }
+
+    .home h1{
+        font-size:48px;
+    }
+
+    .profile-image{
+        width:180px;
+        height:180px;
+    }
+
+    .details{
+        grid-template-columns:1fr;
+    }
+
+    .education{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .skills{
+        grid-template-columns:1fr;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:36px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+<div class="navbar">
+
+<a href="#home" class="logo">
+    KS<span></span>
+</a>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certificates</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<a href="resume.pdf"
+   target="_blank"
+   class="nav-resume">
+
+    Resume
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<section id="home" class="home">
+
+<div>
+
+<div class="home-label">
+    PROFESSIONAL JOURNEY
+</div>
+
+<h1>
+
+Hello, I'm
+<br>
+
+<span>Veernala Kavya Sri</span>
+
+</h1>
+
+<p class="home-description">
+
+I am a passionate Computer Science and Engineering
+student interested in software development,
+web technologies, programming and problem solving.
+
+</p>
+
+
+<div class="buttons">
+
+<a href="#about"
+   class="btn primary">
+
+    About Me →
+
+</a>
+
+<a href="#projects"
+   class="btn secondary">
+
+    My Projects
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="profile-card">
+<img src="profile.jpg"
+     class="profile-image"
+     alt="Profile.jpg">
+
+
+<h2>
+    Kavya sri
+</h2>
+
+<p>
+    CSE Student 
+</p>
+
+
+<div class="profile-line"></div>
+
+
+<div class="profile-stats">
+
+<div>
+
+<strong>08+</strong>
+
+<small>
+    Skills
+</small>
+
+</div>
+
+
+<div>
+
+<strong>04+</strong>
+
+<small>
+    Projects
+</small>
+
+</div>
+
+
+<div>
+
+<strong>05+</strong>
+
+<small>
+    Certificates
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT ME / PERSONAL PROFILE
+===================================================== -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="label">
+    PERSONAL PROFILE
+</div>
+
+<h2 class="title">
+    About <span>Me</span>
+</h2>
+
+<p class="subtitle">
+    A brief introduction about myself.
+</p>
+
+
+<div class="about-grid">
+
+
+<div class="about-text">
+
+<p>
+
+Hello! I am <strong>Kavya sri</strong>,
+a Computer Science and Engineering student
+with a strong interest in technology and
+software development.
+
+</p>
+
+<p>
+
+I enjoy learning new technologies, developing
+projects and solving real-world problems using
+creative and efficient solutions.
+
+</p>
+
+<p>
+
+My goal is to continuously improve my technical
+skills and build a successful career in the
+software industry.
+
+</p>
+
+
+<div class="hobbies">
+
+<h3>
+    Hobbies & Interests
+</h3>
+
+<div class="hobby-list">
+
+<span class="hobby">Knowledge Exploration</span>
+<span class="hobby">Reading</span>
+<span class="hobby">Photography</span>
+<span class="hobby">Drawing</span>
+<span class="hobby">Creative Writing</span>
+<span class="hobby">Problem Solving</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PERSONAL DETAILS -->
+
+<div class="details">
+
+
+<div class="detail">
+
+<small>
+    FULL NAME
+</small>
+
+<strong>
+    VEERNALA KAVYA SRI
+</strong>
+
+</div>
+
+
+<div class="detail">
+
+<small>
+    DATE OF BIRTH
+</small>
+
+<strong>
+    21 / 05 / 2004
+</strong>
+
+</div>
+
+
+<div class="detail">
+
+<small>
+    LOCATION
+</small>
+
+<strong>
+    Hyderabad, Telangana
+</strong>
+
+</div>
+
+
+<div class="detail">
+
+<small>
+    NATIONALITY
+</small>
+
+<strong>
+    Indian
+</strong>
+
+</div>
+
+
+<div class="detail">
+
+<small>
+    EMAIL
+</small>
+
+<strong>
+    kavyasriveernala@gmail.com</strong>
+
+</div>
+
+
+<div class="detail">
+
+<small>
+    PHONE
+</small>
+
+<strong>
+    +91 9618223193
+</strong>
+
+</div>
+
+<div class="detail">
+
+<small>
+    LANGUAGES
+</small>
+
+<strong>
+    English, Telugu, Hindi
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="label">
+    ACADEMIC JOURNEY
+</div>
+
+<h2 class="title">
+    My <span>Education</span>
+</h2>
+
+<p class="subtitle">
+    My educational background.
+</p>
+
+
+<div class="education-list">
+
+
+<!-- COLLEGE -->
+
+<div class="education">
+
+<div class="education-year">
+    2023 – 2026
+</div>
+
+<div>
+
+<h3>
+    Bachelor of Technology
+</h3>
+
+<h4>
+    Computer Science & Engineering
+</h4>
+
+<p>
+    Sridevi Women's Engineering College
+</p>
+
+<p>
+    Vattinagulapally, Telangana
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- DIPLOMA -->
+
+<div class="education">
+
+<div class="education-year">
+    2020 – 2023
+</div>
+
+<div>
+
+<h3>
+   State Board Of Technical Education & Training
+</h3>
+
+<h4>
+    Diploma in Civil Engineering
+</h4>
+
+<p>
+    Sri Sangameshwara Government Polytechnic College
+</p>
+
+<p>
+    Ranjole, Zaheerabad, Telangana
+</p>
+
+
+</div>
+
+</div>
+
+
+
+<!-- SCHOOL -->
+
+<div class="education">
+
+<div class="education-year">
+    2020
+</div>
+
+<div>
+
+<h3>
+    Secondary School
+</h3>
+
+<h4>
+    Class X
+</h4>
+
+<p>
+    St Joseph's High School
+</p>
+
+<p>
+    Patancheru, Telangana
+</p>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="label">
+    TECHNICAL EXPERTISE
+</div>
+
+<h2 class="title">
+    My <span>Skills</span>
+</h2>
+
+
+<div class="skills">
+
+<div class="skill">
+    HTML
+</div>
+
+<div class="skill">
+    CSS
+</div>
+
+<div class="skill">
+    JavaScript
+</div>
+
+<div class="skill">
+    Python
+</div>
+
+<div class="skill">
+    Java
+</div>
+
+
+<div class="skill">
+    SQL
+</div>
+
+<div class="skill">
+    Git & GitHub
+</div>
+
+<div class="skill">
+    Web Development
+</div>
+
+<div class="skill">
+    Problem Solving
+</div>
+
+<div class="skill">
+    Communication
+</div>
+
+<div class="skill">
+    Teamwork
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="label">
+    SELECTED WORK
+</div>
+
+<h2 class="title">
+    My <span>Projects</span>
+</h2>
+
+<p class="subtitle">
+    Academic and personal projects.
+</p>
+
+
+<div class="projects">
+
+
+<div class="project">
+
+<small>
+    PROJECT 01
+</small>
+
+<h3>Privacy Preseving and DPI Verification System
+    </h3>
+
+<p>
+
+Developed a secure cloud-based application focused on privacy-preserving and lightweight verification of Deep Packet Inspection (DPI) processes. The project aims to protect sensitive data while enabling secure file storage, user authentication, and efficient verification in cloud environments.
+</p>
+
+<div class="tech">
+
+<span>Python</span>
+<span>Flask</span>
+<span>Cryptography</span>
+<span>Cloud Computing</span>
+
+</div>
+
+</div>
+
+
+
+<div class="project">
+
+<small>
+    PROJECT 02
+</small>
+
+<h3>
+    Heart Attack Risk Prediction System
+</h3>
+
+<p>
+
+Developed a machine learning-based predictive system that analyzes clinical and patient health data to estimate the risk of heart attack. The project focuses on applying data preprocessing, feature analysis, and machine learning techniques to support early risk assessment.</p>
+
+<div class="tech">
+
+<span>Python</span>
+<span>Sql</span>
+<span>ML Models</span>
+<span>Java Script</span>
+
+</div>
+
+</div>
+
+
+
+<div class="project">
+
+<small>
+    PROJECT 03
+</small>
+
+<h3>
+    Personal Portfolio
+
+</h3>
+
+<p>
+
+A professional responsive portfolio
+website created to showcase my skills,
+education and projects.
+
+</p>
+
+<div class="tech">
+
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+
+
+</div>
+
+</div>
+
+
+
+<div class="project">
+
+<small>
+    PROJECT 04
+</small>
+
+<h3>
+    Handicraft Galore Application</h3>
+
+<p>
+
+Developed a responsive e-commerce web application for browsing and purchasing handcrafted products. The application provides product categories, product details, shopping cart functionality, and a user-friendly shopping experience, with a focus on showcasing traditional handicrafts through a modern web interface.
+
+</p>
+
+<div class="tech">
+
+<span>HTML</span>
+<span>CSS</span>
+<span>Bootstrap</span>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
+
+<section id="certifications">
+
+<div class="container">
+
+<div class="label">
+    PROFESSIONAL DEVELOPMENT
+</div>
+
+<h2 class="title">
+    My <span>Certifications</span>
+</h2>
+
+<p class="subtitle">
+    Certifications and professional courses.
+</p>
+
+
+<div class="certificates">
+
+
+<!-- CERTIFICATE 1 -->
+
+<div class="certificate">
+
+<img src="certificate1.jpg"
+     alt="Certificate 1">
+
+<div class="certificate-info">
+
+<small>
+    CERTIFICATION
+</small>
+
+<h3>
+    Artificial Intelligence
+</h3>
+
+<p>
+Infosys Springboard• 2025
+</p>
+
+<a href="certificate1"
+   target="_blank"
+   class="view">
+
+    View Certificate →
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- CERTIFICATE 2 -->
+
+<div class="certificate">
+
+<img src="certificate2.jpg"
+     alt="certificate2">
+
+<div class="certificate-info">
+
+<small>
+    CERTIFICATION
+</small>
+
+<h3>
+    Machine Learning</h3>
+
+<p>
+    Infosys Springboard • 2025
+</p>
+
+<a href="certificate2.jpg"
+   target="_blank"
+   class="view">
+
+    View Certificate →
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- CERTIFICATE 3 -->
+
+<div class="certificate">
+
+<img src="certificate3.jpg"
+     alt="certificate3">
+
+<div class="certificate-info">
+
+<small>
+    CERTIFICATION
+</small>
+
+<h3>
+    Summer of AI internship programme
+</h3>
+
+<p>
+    SWECHA• 2024
+</p>
+
+<a href="certificate3"
+   target="_blank"
+   class="view">
+
+    View Certificate →
+
+</a>
+
+</div>
+
+</div>
+<!-- CERTIFICATE 4 -->
+
+<div class="certificate">
+
+<div class="certificate-info">
+
+<small>
+    CERTIFICATION
+</small>
+
+<h3>
+    Auto Cad</h3>
+
+<p>
+    • 2023
+</p>
+</div>
+</div>
+<!-- CERTIFICATE 4 -->
+
+<div class="certificate">
+
+<div class="certificate-info">
+
+<small>
+    CERTIFICATION
+</small>
+
+<h3>
+    NCC</h3>
+
+<p>
+    National Caded Corps• 2024
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACHIEVEMENTS
+===================================================== -->
+
+<section id="achievements">
+
+<div class="container">
+
+<div class="label">
+    PROFESSIONAL GROWTH
+</div>
+
+<h2 class="title">
+    My <span>Achievements</span>
+</h2>
+
+
+<div class="achievements">
+
+
+<div class="achievement">
+
+<div class="achievement-dot"></div>
+
+<span>
+    2026
+</span>
+
+<h3>
+    Technical Project Presentation
+</h3>
+
+<p>
+    Presented a technical project and
+    demonstrated practical development skills.
+</p>
+
+</div>
+
+
+
+<div class="achievement">
+
+<div class="achievement-dot"></div>
+
+<span>
+    2025
+</span>
+
+<h3>
+    Technical Workshop
+</h3>
+
+<p>
+    Participated in technical workshops
+    and gained practical knowledge.
+</p>
+
+</div>
+
+
+
+<div class="achievement">
+
+<div class="achievement-dot"></div>
+
+
+<h3>
+    Continuous Learning
+</h3>
+
+<p>
+    Completed technical courses and
+    continuously developed new skills.
+</p>
+
+</div>
+
+<div class="achievement">
+
+<div class="achievement-dot"></div>
+
+
+<h3>
+    Drawing and Creative work
+</h3>
+
+<p>
+   Certifications and Recognized for creativity and artistic skills in drawing.</p>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESUME
+===================================================== -->
+
+<section id="resume">
+
+<div class="container">
+
+<h2>
+    My Resume
+</h2>
+
+<p>
+    View or download my complete resume.
+</p>
+
+
+<div class="buttons"
+     style="justify-content:center;">
+
+<a href="resume.pdf"
+   target="_blank"
+   class="btn primary">
+
+    View Resume
+
+</a>
+
+<a href="resume.pdf"
+   download
+   class="btn secondary">
+
+    Download Resume
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="label">
+            GET IN TOUCH
+        </div>
+
+        <h2 class="title">
+            Contact <span>Me</span>
+        </h2>
+
+        <p class="subtitle">
+            Feel free to connect with me through the links below.
+        </p>
+
+
+        <div class="contact">
+
+            <!-- CONTACT DETAILS -->
+
+            <div class="contact-details">
+
+
+                <!-- GMAIL -->
+
+                <a href="mailto:kavyasriveernala@gmail.com"
+                   class="contact-item">
+
+                    <div class="contact-icon gmail">
+                        ✉ <small>EMAIL</small>
+
+                    </div>
+                   
+           </a>
+
+                <!-- GITHUB -->
+
+                <a href="https://github.com/kavya081996"
+                   target="_blank"
+                   class="contact-item">
+
+                    <div class="contact-icon github">
+                        <small>GITHUB</small>
+
+                    </div>
+                  
+                </a>
+
+                <!-- LINKEDIN -->
+
+                <a href="https://www.linkedin.com/in/Kavya Veernala"
+                   target="_blank"
+                   class="contact-item">
+
+                    <div class="contact-icon linkedin">
+                        <small>LINKEDIN</small>
+
+                    </div>
+                    
+
+                </a>
+
+                <!-- PHONE -->
+
+                <a href="tel:+919618223193"
+                   class="contact-item">
+
+                    <div class="contact-icon phone">
+                        ☎ <small>PHONE</small>
+
+                    </div>
+
+                    
+                </a>
+
+                <!-- LOCATION -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon location">
+                       📍
+                        <strong>
+                            Hyderabad, Telangana, India
+                        </strong>
+
+                    </div>
+
+              
+                </div>
+
+            </div>
+
+<form class="contact-form"
+      onsubmit="sendMessage(event)">
+
+<input
+type="text"
+placeholder="Your Name"
+required
+>
+
+<input
+type="email"
+placeholder="Your Email"
+required
+>
+
+<input
+type="text"
+placeholder="Subject"
+required
+>
+
+<textarea
+placeholder="Your Message"
+required>
+</textarea>
+
+<button type="submit">
+    Send Message →
+</button>
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<h3>
+    veernala kavya sri<span></span>
+</h3>
+
+<p>
+    Computer Science & Engineering Student
+</p>
+
+<p>
+    © 2026 Kavya Sri. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+<script>
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    alert("Thank you for your message!");
+
+}
+
+</script>
+
+
+</body>
+</html>
